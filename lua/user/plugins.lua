@@ -58,6 +58,23 @@ return packer.startup(function(use)
       require"surround".setup {mappings_style = "surround"}
     end
   }
+  use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional, for file icons
+  },
+}
+use 'nvim-telescope/telescope.nvim'
+use 'fannheyward/telescope-coc.nvim'
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
+
+use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+use("petertriho/nvim-scrollbar")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
